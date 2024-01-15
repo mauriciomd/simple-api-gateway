@@ -1,0 +1,25 @@
+version: '3'
+services:
+  gateway:
+    container_name: gateway
+    build: 
+      context: .
+      target: gateway
+    ports:
+      - 8080:8080
+  
+  payments:
+    container_name: payments
+    build: 
+      context: .
+      target: payments
+    ports:
+      - 3000
+  
+  shippings:
+    container_name: shippings
+    build: 
+      context: .
+      target: shippings
+    ports:
+      - 3000
